@@ -1,0 +1,26 @@
+[mqtt]
+broker_host = "mymqtthost.example.org"
+
+# Modbus configuration example.
+# NOTE: this requires the symbiot-modbus package to be installed.
+# [modbus]
+# query_interval = 30
+
+# [modbus.connection]
+# host = "mymodbusserver.example.org"
+# port = 502
+# slave_id = 1
+#
+# [modbus.channels.chan1]
+# address = 229
+# quantity = 2
+# combine = true
+# combine_reversed = false
+# topic = "mydevice/chan1"
+#
+# [modbus.channels.chan2]
+# address = 231
+# quantity = 2
+# combine = true
+# combine_reversed = false
+# topic = "mydevice/chan2"

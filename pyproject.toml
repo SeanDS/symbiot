@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "symbiot"
+description = "MQTT topic provider for your IoT project"
+readme = "README.md"
+authors = [{name = "Sean Leavey", email = "sean.leavey@stfc.ac.uk"}]
+license = {text = "GPL-3.0-or-later"}
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.8"
+dependencies = [
+  "click >=7.1",
+  "tomli >=2.0.0",
+  "asyncio_mqtt >=0.15.0",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "pre-commit",
+  "pylint",
+  "flake8",
+  "flake8-bugbear",
+]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/SeanDS/symbiot/issues"
+"Source Code" = "https://github.com/SeanDS/symbiot"
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+
+[tool.setuptools_scm]
+write_to = "symbiot/_version.py"
